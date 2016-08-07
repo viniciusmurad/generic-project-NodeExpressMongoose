@@ -5,10 +5,10 @@ module.exports = function(app) {
 		.get(api.getAll)
 		.post(api.addItem);
 		
-	// app.route('/api/:id')
-	// 	.get(api.getGenericId)
-	// 	.delete(api.deleteGeneric)
-	// 	.put(api.updateGeneric);
+	app.route('/generic/:id')
+		.get(api.getById)
+		.delete(api.deleteItem)
+		.put(api.updateItem);
 
 }
 
