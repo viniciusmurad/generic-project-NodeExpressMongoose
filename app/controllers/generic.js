@@ -25,37 +25,4 @@ api.addItem = function(req, res) {
 	})
 }
 
-
-// api.getAll = function(req, res) {
-// 	model.find({})
-// 		.exec(function (err, result) {
-// 			if(err) {
-// 				console.log(err);
-// 			} else {
-// 				console.log(result);
-// 				res.json(result);
-// 			}
-// 		})
-// }
-
-// api.addItem = function(req, res) {
-// 	model.save(req.body)
-// 		.then(function (result) {
-// 			res.json(result);
-// 		}, function(error) {
-// 			console.log(error);
-// 			res.status(500).json(error);
-// 		})
-// }
-
-// api.getAll = function(req, res) {
-// 	model.find({})
-// 		.then(function (result) {
-// 			res.json(result);
-// 		}, function (error) {
-// 			console.log(error);
-// 			res.status(500).json(error);
-// 		})
-// }
-
 module.exports = api;
