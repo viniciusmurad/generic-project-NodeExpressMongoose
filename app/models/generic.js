@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
-var schemaGeneric = mongoose.Schema({
+var Schema = mongoose.Schema;
+
+var schemaGeneric = new Schema({
 	generic: {
 		type: Boolean,
 		default: true
