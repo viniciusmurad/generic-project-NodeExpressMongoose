@@ -2,8 +2,8 @@ var http = require('http');
 var app = require('./config/express');
 require('./config/database')('localhost/generic');
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 http.createServer(app).listen(port, function() {
-	console.log('server running on port ' + port);
+	console.log('gulp server running on port ' + port);
 })
