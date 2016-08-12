@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var api = {};
 var Model = mongoose.model('Generic');
 
+// Get all items
 api.getAll = function(req, res) {
 	Model.find(function(err, results) {
 		if(err) {
@@ -13,6 +14,7 @@ api.getAll = function(req, res) {
 	})
 }
 
+// Get item by _id
 api.getById = function(req, res) {
 	Model.findById(req.params.id, function(err, results) {
 		if (err) {
@@ -25,6 +27,7 @@ api.getById = function(req, res) {
 	})
 }
 
+// Create item
 api.addItem = function(req, res) {
 	var newItem = new Model(req.body);
 	newItem.save(function(err, results) {
@@ -37,6 +40,7 @@ api.addItem = function(req, res) {
 	})
 }
 
+// Edit item
 api.updateItem = function(req, res) {
 	Model.findByIdAndUpdate(req.params.id, req.body, function(err, results) {
 		if (err) {
@@ -49,6 +53,7 @@ api.updateItem = function(req, res) {
 	})
 }
 
+// Delete item
 api.deleteItem = function(req, res) {
 	Model.findByIdAndRemove(req.params.id, function(err, results) {
 		if(err) {
