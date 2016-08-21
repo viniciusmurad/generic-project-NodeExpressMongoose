@@ -11,3 +11,7 @@ Install dependencies using:
 Run server using:
 
 ``` gulp ```
+
+Run mocha using:
+
+``` mocha ```
