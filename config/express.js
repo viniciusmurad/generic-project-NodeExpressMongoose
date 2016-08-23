@@ -17,6 +17,3 @@ consign()
 	.into(app);
 
 module.exports = app;
-
-
-

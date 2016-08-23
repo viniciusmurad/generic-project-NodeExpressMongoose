@@ -1,6 +1,5 @@
-var mongoose = require('mongoose');
-
-var Schema = mongoose.Schema;
+var mongoose = require('mongoose'),
+	Schema = mongoose.Schema;
 
 var schemaGeneric = new Schema({
 	generic: {
@@ -9,4 +8,5 @@ var schemaGeneric = new Schema({
 	}
 })
 
-module.exports = mongoose.model('Generic', schemaGeneric);
+module.exports = mongoose.model('Test', schemaGeneric);
+

@@ -1,6 +1,6 @@
 var http = require('http'),
 	app = require('./config/express');
-require('./config/database')('localhost/generic');
+require('./config/database')('localhost/test');
 
 var port = process.env.PORT || 3000;
 
