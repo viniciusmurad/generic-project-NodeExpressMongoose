@@ -1,27 +1,13 @@
-var app = require('../config/express'),
-	should = require('should'),
-	request = require('supertest');
+var expect = require("chai").expect;
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/test'); 
 
 describe('Generic tests', function() {
 	
-	it('#get all items', function(done) {
-		request(app)
-			.get('/generic')
-			.expect(200)
-			.end(function (err, res) {
-				res.status.should.equal(200);
-			})
-			done();
+	it('#get all items', function() {
+		genericList = [];
+		expect(genericList.length).to.be.at.least(1);
 	})
 
-	it('#add user', function(done) {
-		request(app)
-			.post('/generic')
-			.send({generic: false})
-			.expect(200)
-			.end(function (err, res) {
-				res.status.should.equal(200);
-			})
-			done();
-	})
 })
